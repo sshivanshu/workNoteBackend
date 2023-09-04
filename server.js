@@ -15,7 +15,12 @@ const PORT = process.env.PORT || 3500
 console.log(process.env.NODE_ENV)
 
 connectDB()
-
+app.use((req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', 'https://work-2x6t.onrender.com');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+    next();
+  });
 app.use(logger)
 
 app.use(cors(corsOptions))

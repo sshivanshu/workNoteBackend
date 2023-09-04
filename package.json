@@ -1,7 +1,7 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "Technote mern project",
+  "description": "workNote mern project",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon server",
